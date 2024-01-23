@@ -81,7 +81,7 @@ It is the foundation of logical reasoning, we start with assumptions/theory and 
 
 ### Inductive reasoning
 
-It is the process of going from a specific case to a general statement. 
+It is the process of going from a specific case to a general statement. It is what we can broadly name: learning from evidence
 
 --
 
@@ -103,7 +103,7 @@ It is the process of going from a specific case to a general statement.
 
 #### Frequentist Interpretation
 
-The probability of an event is the limit of its relative fequency in an repetible experiment
+The probability of an event is the limit of its relative frequency in an repeatable  experiment
 > "The theory of probability can never lead to a definite statement concerning a single event." R Von Mises
 
 --
@@ -138,9 +138,16 @@ but ...
 
 - when we use inductive reasoning (i.e. data) is a frequentist interpretation our 'natural' way to think probabilities? 
 
+--
+
+__Do you really need a frequency to have a probability__?
+
 ---
 
 # 1966 Football world cup final
+
+
+--
 
 .pull-left[
 
@@ -152,18 +159,10 @@ The 1966 FIFA World Cup final was a football match played at Wembley Stadium in 
 
 ]
 
-
--- 
-
-
+--
 .pull-right[
 
 >What is the probability of England winning 1966 men WC final?
-
-
-
--- 
-
 
 > If I am telling you that the men WC winning frequency of England is 4% do you change your probability?
 
@@ -178,7 +177,6 @@ The 2014 Tour de France was the 101st edition of the race, one of cycling's Gran
 #### What is the probability of a British cyclist winning Tour de France 2014?
 
 --
-
 According to many observers before the race the top two favourites for the general classification were Chris Froome (Team Sky) and Alberto Contador (Tinkoff–Saxo).
 
 
@@ -188,16 +186,23 @@ According to many observers before the race the top two favourites for the gener
 
 # Tour de France 2014
 
-.pull-right[
+.pull-left[
+Then stage 5 happened!!!
 
 .right[![Right-aligned image](https://upload.wikimedia.org/wikipedia/commons/e/e9/Peloton_TDF2014_Etape_5_Gruson_%28cropped%29.jpg)]
-
 ]
-
+--
+And unfortunately Chris Froome hates the Paris-Roubaix 
 
 --
-
 .pull-left[
+.right[![Right-aligned image](https://i.ytimg.com/vi/OmIB3PXk2yw/maxresdefault.jpg)]
+]
+
+#### what is your probability now?
+
+--
+.pull-right[
 
 .left[![Right-aligned image](./Screenshot from 2024-01-23 10-21-30.png)]
 
@@ -210,23 +215,25 @@ According to many observers before the race the top two favourites for the gener
 
 
 - The subjective view stress the connection between probability and knowledge/information. 
---
 
+--
 > That's a very powerful concept. 
 
-It allows as to think and assess probabilities of:
+
+--
+It allows us to think and assess probabilities of:
 
 1. events already happened but for which we don't know the outcome.
 
+--
 2. unique events.
 
+--
 3. when frequency contains to little information and we need to rely on our judgment.
 
 
 --
 
-
-  
 ### It is your "ignorance" that creates uncertainty (to you)!
 
 
@@ -234,10 +241,65 @@ It allows as to think and assess probabilities of:
 
 # The objectivity smoke screen
 
+A huge complain about subjective probability is its "subjectivity": if it is subjective then cannot be "scientific".
 
+But that is probably a consequence of a negative meaning that we assign to something that is "subjective" as if it is arbitrary. 
+
+But it is not.
+
+First, you need coherence in your probability assessment.
+
+Second, if you have the right incentives, you will try to use all the information and knowledge available to you to assess the probability as best as you can (even using a frequency if available). And you can use knowledge and information to explain your assessment.
+
+Third, you need a mechanism to learn from evidence and improve your probabilities in a systematic and predictable way.
+
+
+--
+__Is a frequency really objective__?
+
+---
+# A deductive process example: tossing coins
+
+## I am a frequentist:
+I toss the coin 1000 times and I get 502 times tail and 498 times head $\implies$ The probability of tail is then 50% (0.5). What is the probability of obtaining 3 tails in 3 tosses: TTT
+
+$$P(TTT| \theta = 0.5) = 0.5 \times 0.5 \times 0.5 = 0.125 $$
+
+--
+## I am a subjectivist:
+I just watched on youtube a documentary on the Royal Mint showing all the fantastic technology they have to create balanced coins $\implies$ The probability of tail is then 50% (0.5). What is the probability of obtaining 3 tails in 3 tosses: TTT
+
+$$P(TTT| \theta = 0.5) = 0.5 \times 0.5 \times 0.5 = 0.125 $$
 
 ---
 
 # Frequentist inductive process (learning from data)
+
+
+---
+
+# Subjectivist inductive process (learning from data)
+
+
+---
+# References
+
+#### If you hate maths (but this is really a useful reading for everyone):
+
+1. McGrayne, Sharon Bertsch. The Theory That Would Not Die: How Bayes' Rule Cracked the Enigma Code, Hunted Down Russian Submarines, & Emerged Triumphant from Two Centuries of Controversy. Yale University Press, 2011.
+
+2. Spiegelhalter, David. The art of statistics: Learning from data. Penguin UK, 2019.
+
+
+#### If little math is fine (but very little please):
+
+3. Lindley, Dennis V. Understanding uncertainty. John Wiley & Sons, 2013.
+
+
+#### If you are the $m\alpha2t\epsilon\mathbf{R}$ of math:
+
+4. De Finetti, Bruno. Theory of probability: A critical introductory treatment. Vol. 6. John Wiley & Sons, 2017.
+
+5. Jaynes, Edwin T. Probability theory: The logic of science. Cambridge university press, 2003.
 
 
