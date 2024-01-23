@@ -146,15 +146,9 @@ but ...
 
 .right[![Left-aligned image](https://cdn.images.express.co.uk/img/dynamic/67/750x445/1292506.jpg)]
 
-]
-
---
-
-.pull-right[
-
 from Wikipedia:
 
->The 1966 FIFA World Cup final was a football match played at Wembley Stadium in London on 30 July 1966 to determine the winner of the 1966 FIFA World Cup, the eighth FIFA World Cup. The match was contested by England and West Germany...
+The 1966 FIFA World Cup final was a football match played at Wembley Stadium in London on 30 July 1966 to determine the winner of the 1966 FIFA World Cup, the eighth FIFA World Cup. The match was contested by England and West Germany...
 
 ]
 
@@ -162,8 +156,18 @@ from Wikipedia:
 -- 
 
 
-#### What is the probability of England winning 1966 WC final?
+.pull-right[
 
+>What is the probability of England winning 1966 men WC final?
+
+
+
+-- 
+
+
+> If I am telling you that the men WC winning frequency of England is 4% do you change your probability?
+
+]
 
 ---
 
@@ -204,17 +208,36 @@ According to many observers before the race the top two favourites for the gener
 ---
 # The power of the subjective view
 
-- Assume that probability is real (frequentist view). Then what can you say if I ask "what is a probability of tail with a coin that has two tails or two heads?"
 
 - The subjective view stress the connection between probability and knowledge/information. 
 --
 
-- That's a very powerful concept. It allows as to think and compute probabilities of events already happened but for which we don't know the outcome.
+> That's a very powerful concept. 
+
+It allows as to think and assess probabilities of:
+
+1. events already happened but for which we don't know the outcome.
+
+2. unique events.
+
+3. when frequency contains to little information and we need to rely on our judgment.
+
+
 --
 
 
   
-### It is your ignorance that creates uncertainty (to you)!
+### It is your "ignorance" that creates uncertainty (to you)!
+
 
 ---
+
+# The objectivity smoke screen
+
+
+
+---
+
+# Frequentist inductive process (learning from data)
+
 
