@@ -273,12 +273,15 @@ $$P(TTT| \theta = 0.5) = 0.5 \times 0.5 \times 0.5 = 0.125 $$
 
 ---
 
-# Frequentist inductive process (learning from data)
+# Frequentist inductive process 
 
+I toss the coin 3 times getting TTT, what is the probability that the coin is balanced? $P(is_balanced | TTT)$
+
+The frequentist computes 
 
 ---
 
-# Subjectivist inductive process (learning from data)
+# Subjectivist inductive process 
 
 
 ---
