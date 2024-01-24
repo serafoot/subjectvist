@@ -1,5 +1,5 @@
 ---
-title: "Subjective Probability for risk supervision!"
+title: "Subjective Probability for risk specialists!"
 subtitle: ""
 author: "Andrea Serafino"
 institute: "QMA"
