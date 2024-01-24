@@ -199,14 +199,18 @@ And unfortunately Chris Froome hates the Paris-Roubaix
 .right[![Right-aligned image](https://i.ytimg.com/vi/OmIB3PXk2yw/maxresdefault.jpg)]
 ]
 
-#### what is your probability now?
 
 --
-.pull-right[
+### what is your probability now?
 
-.left[![Right-aligned image](./Screenshot from 2024-01-23 10-21-30.png)]
+--
 
-]
+
+
+![Center-aligned image](./Screenshot from 2024-01-23 10-21-30.png)
+
+
+
 
 
 
@@ -293,14 +297,18 @@ Think about these events:
 
 The frequentist is not a incompetent, knows that these things are different.
 
---
+
+---
+
+# Frequentist inductive process 
 
 In computing $P(TTT | \theta = 0.5)$, the frequentist says something along these lines: "if the true value of $\theta=0.5$ then the observed sample that contains TTT has  likelihood of 0.125 to be observed". 
 
 A large majority of people (including professional statisticians) will confuse this sentence as "the probability of $\theta$ is 0.125 given that we have observed TTT"
 
 
---
+
+
 Conclusion: the frequentist stops using probability calculus to learn from data and creates complex set of concepts to answer inductive questions. These complex concepts are not really intuitive and the majority of people will likely misinterpret them and/or be confused.
 
 
@@ -315,7 +323,7 @@ I toss the coin 3 times getting TTT, what is the probability that the coin is ba
 
 Answer the question directly computing $P(\theta=.5 | TTT)$
 
---
+
 
 Conclusion: subjectivist use the same rules for deductive and inductive reasoning and these rules are the one of probability calculus. __The output of the subjectivist analysis has a easy interpretation that is consistent with the intuition of the great majority of people.__
 
