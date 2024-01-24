@@ -108,7 +108,7 @@ The probability of an event is the limit of its relative frequency in an repeata
 
 --
 
-#### Subjective Interpretation
+#### Subjective Interpretation (Bayesian)
 
 The probability of an event/proposition is the __coherent__ personal belief of the event being true conditional on the state of knowledge 
 > "Probability does not exist." B De Finetti
@@ -229,7 +229,7 @@ It allows us to think and assess probabilities of:
 2. unique events.
 
 --
-3. when frequency contains to little information and we need to rely on our judgment.
+3. when frequency contains too little information and we need to rely on our judgement.
 
 
 --
@@ -267,7 +267,7 @@ $$P(TTT| \theta = 0.5) = 0.5 \times 0.5 \times 0.5 = 0.125 $$
 
 --
 ## I am a subjectivist:
-I just watched on youtube a documentary on the Royal Mint showing all the fantastic technology they have to create balanced coins $\implies$ The probability of tail is then 50% (0.5). What is the probability of obtaining 3 tails in 3 tosses: TTT
+I've just watched on youtube a documentary on the Royal Mint showing all the fantastic technology they have to create balanced coins $\implies$ The probability of tail is then 50% (0.5). What is the probability of obtaining 3 tails in 3 tosses: TTT
 
 $$P(TTT| \theta = 0.5) = 0.5 \times 0.5 \times 0.5 = 0.125 $$
 
@@ -275,14 +275,94 @@ $$P(TTT| \theta = 0.5) = 0.5 \times 0.5 \times 0.5 = 0.125 $$
 
 # Frequentist inductive process 
 
-I toss the coin 3 times getting TTT, what is the probability that the coin is balanced? $P(is_balanced | TTT)$
+I toss the coin 3 times getting TTT, what is the probability that the coin is balanced? $P(\theta=.5 | TTT)$
 
-The frequentist computes 
+--
+
+The frequentist computes instead $P(TTT | \theta = 0.5)$. 
+
+__BUT $P(\theta=.5 | TTT)$ and $P(TTT | \theta = 0.5)$ are two completely different things!!!__
+
+--
+
+Think about these events: 
+
+1. The probability of taking an umbrella with you given that it is raining
+
+2. The probability of raining given that you take an umbrella with you
+
+The frequentist is not a incompetent, knows that these things are different.
+
+--
+
+In computing $P(TTT | \theta = 0.5)$, the frequentist says something along these lines: "if the true value of $\theta=0.5$ then the observed sample that contains TTT has  likelihood of 0.125 to be observed". 
+
+A large majority of people (including professional statisticians) will confuse this sentence as "the probability of $\theta$ is 0.125 given that we have observed TTT"
+
+
+--
+Conclusion: the frequentist stops using probability calculus to learn from data and creates complex set of concepts to answer inductive questions. These complex concepts are not really intuitive and the majority of people will likely misinterpret them and/or be confused.
+
+
 
 ---
 
 # Subjectivist inductive process 
 
+.pull-left[
+
+I toss the coin 3 times getting TTT, what is the probability that the coin is balanced? $P(\theta=.5 | TTT)$
+
+Answer the question directly computing $P(\theta=.5 | TTT)$
+
+--
+
+Conclusion: subjectivist use the same rules for deductive and inductive reasoning and these rules are the one of probability calculus. __The output of the subjectivist analysis has a easy interpretation that is consistent with the intuition of the great majority of people.__
+
+
+]
+
+.pull-right[
+
+```{r, echo=FALSE, message=FALSE, include=FALSE, cache=TRUE}
+library(brms)
+library(tidyverse)
+bdata <- data.frame(y = c(1, 1, 1))
+fit <- brm(
+  data = bdata,
+  family = bernoulli,
+  y  ~ 0 + Intercept,
+  prior = c(prior(normal(-0.400, 0.654),
+                  coef = Intercept)),
+  iter = 1000,
+  refresh = 0
+)
+post <- posterior_samples(fit)
+post %>% 
+  mutate(p = exp(b_Intercept) / (1 + exp(b_Intercept))) -> post
+
+```
+
+```{r, echo=FALSE, dpi=40, fig.align='center'}
+library(ggplot2)
+ggplot(post, aes(p)) +
+  geom_density() + theme_bw()
+
+
+```
+]
+
+---
+
+1. subjective probability is powerful! 
+
+2. subjective probability is strictly connected with knowledge and information
+
+3. subjective probability allows intuitive inductive reasoning (answer [interesting] question directly). __subjective probability does not warrant that the answer to the questions are of good quality!! i.e. if you build a bad model you get low quality answers__ 
+
+4. subjective probability can use frequency argument to inform probability assessments without the cage where everything should be based on frequencies.
+
+5. subjective probability is transparent, because force you to explain and motivate without using the 'objectivity' smoke screen.
 
 ---
 # References
@@ -301,7 +381,7 @@ The frequentist computes
 
 #### If you are the $m\alpha2t\epsilon\mathbf{R}$ of math:
 
-4. De Finetti, Bruno. Theory of probability: A critical introductory treatment. Vol. 6. John Wiley & Sons, 2017.
+4. De Finetti, Bruno. Theory of probability: A critical introductory treatment. John Wiley & Sons, 2017.
 
 5. Jaynes, Edwin T. Probability theory: The logic of science. Cambridge university press, 2003.
 
